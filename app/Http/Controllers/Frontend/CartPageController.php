@@ -15,7 +15,7 @@ class CartPageController extends Controller
 
     public function myCartView()
     {
-
+        var_dump(session()->get('cart'));
         return view('frontend.frontend_layout.cart_page.mycart_view');
     }
 
@@ -40,8 +40,10 @@ class CartPageController extends Controller
         $cartQty = count($cartItems);
         $cartTotal = 0;
 
+        //var_dump($cartItems);
         foreach ($cartItems as $item) {
             $cartTotal += $item['price'] * $item['quantity'];
+            //print_r($item['name']);
         }
 
         return response()->json([
@@ -79,15 +81,6 @@ class CartPageController extends Controller
 
     }
 
-    private function calculateTotal()
-    {
-        $cartItems = session('cart.items', []);
-        $total = 0;
-        foreach ($cartItems as $item) {
-            $total += $item['qty'] * $item['price'];
-        }
-        return $total;
-    }
 
     public function removeFromCart($rowId)
     {
@@ -96,7 +89,7 @@ class CartPageController extends Controller
         if (array_key_exists($rowId, $cartItems)) {
             unset($cartItems[$rowId]);
 
-            session()->put('cart.items', $cartItems);
+            session()->put('cart', $cartItems);
 
             return response()->json(['success' => 'Product Remove from Cart'], 200);
         }

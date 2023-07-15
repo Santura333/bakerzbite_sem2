@@ -20,7 +20,7 @@ Bakerz Bite - Cart Page
                                     <th>Qty</th>
                                     <th>Remove</th>
                                 </tr>
-                             
+
                                 {{-- @if(session('cart'))
                                 @foreach(session('cart') as $id => $details)
 
