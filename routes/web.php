@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\FrontendUserProfileController;
 use App\Http\Controllers\Frontend\FrontendPageController;
+use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\UserController;
@@ -35,7 +36,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
-// user 
+// user
 // user middlware to group route request????
 Route::middleware(['auth:web'])->group(function () {
 
@@ -102,4 +103,13 @@ Route::middleware(['auth:admin'])->group(function () {
 
     });
 
+});
+
+// Route Product
+Route::prefix('shop')->group(function(){
+    Route::get('/product/{id}', [ProductController::class, 'show']);
+
+    Route::get('/', [ProductController::class, 'index']);
+
+    Route::get('/{categoryName}', [ProductController::class, 'category']);
 });
