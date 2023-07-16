@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-
     protected $table = 'products';
     protected $primaryKey = 'id';
     protected $guarded = [];
@@ -36,6 +35,4 @@ class Product extends Model
     public function orderDetails(){
         return $this->belongsTo(OrderDetail::class, 'product_id', 'id');
     }
-
-    
 }

@@ -55,6 +55,7 @@ class CartController extends Controller
             'alert-type' => 'success'
         ];
         session()->put('cart', $cart);
+
         return redirect()->route('myCartView')->with($notification);
     }
 
