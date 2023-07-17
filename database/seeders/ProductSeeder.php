@@ -9,7 +9,6 @@ use App\Models\ProductImage;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
 {
@@ -380,80 +379,320 @@ class ProductSeeder extends Seeder
                 'path' => 'cakes_1_1.png',
             ],
             [
+                'product_id' => 1,
+                'path' => 'cakes_1_2.png',
+            ],
+            [
+                'product_id' => 1,
+                'path' => 'cakes_1_3.png',
+            ],
+            [
+                'product_id' => 1,
+                'path' => 'cakes_1_4.png',
+            ],
+            [
                 'product_id' => 2,
                 'path' => 'cakes_2_1.png',
+            ],
+            [
+                'product_id' => 2,
+                'path' => 'cakes_2_2.png',
+            ],
+            [
+                'product_id' => 2,
+                'path' => 'cakes_2_3.png',
+            ],
+            [
+                'product_id' => 2,
+                'path' => 'cakes_2_4.png',
             ],
             [
                 'product_id' => 3,
                 'path' => 'cakes_3_1.png',
             ],
             [
+                'product_id' => 3,
+                'path' => 'cakes_3_2.png',
+            ],
+            [
+                'product_id' => 3,
+                'path' => 'cakes_3_3.png',
+            ],
+            [
+                'product_id' => 3,
+                'path' => 'cakes_3_4.png',
+            ],
+            [
                 'product_id' => 4,
                 'path' => 'cakes_4_1.png',
+            ],
+            [
+                'product_id' => 4,
+                'path' => 'cakes_4_2.png',
+            ],
+            [
+                'product_id' => 4,
+                'path' => 'cakes_4_3.png',
+            ],
+            [
+                'product_id' => 4,
+                'path' => 'cakes_4_4.png',
             ],
             [
                 'product_id' => 5,
                 'path' => 'cakes_5_1.png',
             ],
             [
+                'product_id' => 5,
+                'path' => 'cakes_5_2.png',
+            ],
+            [
+                'product_id' => 5,
+                'path' => 'cakes_5_3.png',
+            ],
+            [
+                'product_id' => 5,
+                'path' => 'cakes_5_4.png',
+            ],
+            [
                 'product_id' => 6,
                 'path' => 'cookies_11_1.png',
+            ],
+            [
+                'product_id' => 6,
+                'path' => 'cookies_11_2.png',
+            ],
+            [
+                'product_id' => 6,
+                'path' => 'cookies_11_3.png',
+            ],
+            [
+                'product_id' => 6,
+                'path' => 'cookies_11_4.png',
             ],
             [
                 'product_id' => 7,
                 'path' => 'cookies_12_1.png',
             ],
             [
+                'product_id' => 7,
+                'path' => 'cookies_12_2.png',
+            ],
+            [
+                'product_id' => 7,
+                'path' => 'cookies_12_3.png',
+            ],
+            [
+                'product_id' => 7,
+                'path' => 'cookies_12_4.png',
+            ],
+            [
                 'product_id' => 8,
                 'path' => 'cookies_13_1.png',
+            ],
+            [
+                'product_id' => 8,
+                'path' => 'cookies_13_2.png',
+            ],
+            [
+                'product_id' => 8,
+                'path' => 'cookies_13_3.png',
+            ],
+            [
+                'product_id' => 8,
+                'path' => 'cookies_13_4.png',
             ],
             [
                 'product_id' => 9,
                 'path' => 'cookies_14_1.png',
             ],
             [
+                'product_id' => 9,
+                'path' => 'cookies_14_2.png',
+            ],
+            [
+                'product_id' => 9,
+                'path' => 'cookies_14_3.png',
+            ],
+            [
+                'product_id' => 9,
+                'path' => 'cookies_14_4.png',
+            ],
+            [
                 'product_id' => 10,
                 'path' => 'cookies_15_1.png',
+            ],
+            [
+                'product_id' => 10,
+                'path' => 'cookies_15_2.png',
+            ],
+            [
+                'product_id' => 10,
+                'path' => 'cookies_15_3.png',
+            ],
+            [
+                'product_id' => 10,
+                'path' => 'cookies_15_4.png',
             ],
             [
                 'product_id' => 11,
                 'path' => 'pastry_6_1.png',
             ],
             [
+                'product_id' => 11,
+                'path' => 'pastry_6_2.png',
+            ],
+            [
+                'product_id' => 11,
+                'path' => 'pastry_6_3.png',
+            ],
+            [
+                'product_id' => 11,
+                'path' => 'pastry_6_4.png',
+            ],
+            [
                 'product_id' => 12,
                 'path' => 'pastry_7_1.png',
+            ],
+            [
+                'product_id' => 12,
+                'path' => 'pastry_7_2.png',
+            ],
+            [
+                'product_id' => 12,
+                'path' => 'pastry_7_3.png',
+            ],
+            [
+                'product_id' => 12,
+                'path' => 'pastry_7_4.png',
             ],
             [
                 'product_id' => 13,
                 'path' => 'pastry_8_1.png',
             ],
             [
+                'product_id' => 13,
+                'path' => 'pastry_8_2.png',
+            ],
+            [
+                'product_id' => 13,
+                'path' => 'pastry_8_3.png',
+            ],
+            [
+                'product_id' => 13,
+                'path' => 'pastry_8_4.png',
+            ],
+            [
                 'product_id' => 14,
                 'path' => 'pastry_9_1.png',
+            ],
+            [
+                'product_id' => 14,
+                'path' => 'pastry_9_2.png',
+            ],
+            [
+                'product_id' => 14,
+                'path' => 'pastry_9_3.png',
+            ],
+            [
+                'product_id' => 14,
+                'path' => 'pastry_9_4.png',
             ],
             [
                 'product_id' => 15,
                 'path' => 'pastry_10_1.png',
             ],
             [
+                'product_id' => 15,
+                'path' => 'pastry_10_2.png',
+            ],
+            [
+                'product_id' => 15,
+                'path' => 'pastry_10_3.png',
+            ],
+            [
+                'product_id' => 15,
+                'path' => 'pastry_10_4.png',
+            ],
+            [
                 'product_id' => 16,
                 'path' => 'pies_16_1.png',
+            ],
+            [
+                'product_id' => 16,
+                'path' => 'pies_16_2.png',
+            ],
+            [
+                'product_id' => 16,
+                'path' => 'pies_16_3.png',
+            ],
+            [
+                'product_id' => 16,
+                'path' => 'pies_16_4.png',
             ],
             [
                 'product_id' => 17,
                 'path' => 'pies_17_1.png',
             ],
             [
+                'product_id' => 17,
+                'path' => 'pies_17_2.png',
+            ],
+            [
+                'product_id' => 17,
+                'path' => 'pies_17_3.png',
+            ],
+            [
+                'product_id' => 17,
+                'path' => 'pies_17_4.png',
+            ],
+            [
                 'product_id' => 18,
                 'path' => 'pies_18_1.png',
+            ],
+            [
+                'product_id' => 18,
+                'path' => 'pies_18_2.png',
+            ],
+            [
+                'product_id' => 18,
+                'path' => 'pies_18_3.png',
+            ],
+            [
+                'product_id' => 18,
+                'path' => 'pies_18_4.png',
             ],
             [
                 'product_id' => 19,
                 'path' => 'pies_19_1.png',
             ],
             [
+                'product_id' => 19,
+                'path' => 'pies_19_2.png',
+            ],
+            [
+                'product_id' => 19,
+                'path' => 'pies_19_3.png',
+            ],
+            [
+                'product_id' => 19,
+                'path' => 'pies_19_4.png',
+            ],
+            [
                 'product_id' => 20,
                 'path' => 'pies_20_1.png',
+            ],
+            [
+                'product_id' => 20,
+                'path' => 'pies_20_2.png',
+            ],
+            [
+                'product_id' => 20,
+                'path' => 'pies_20_3.png',
+            ],
+            [
+                'product_id' => 20,
+                'path' => 'pies_20_4.png',
             ],
         ]);
 

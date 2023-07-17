@@ -116,9 +116,7 @@
                                 </div>
                                 <div class="position-relative mt-auto">
                                     <a href="shop/product/{{ $product->id }}">
-                                        <img class="img-fluid" src="{{ asset('frontend') }}/img/items/{{ $product->productImages[0]->path }}"
-                                            alt="">
-
+                                        <img class="img-fluid" src="{{ asset('frontend') }}/img/items/{{ $product->productImages[0]->path }}" alt="">
                                     </a>
                                     <div class="product-overlay">
                                         <a class="btn btn-lg-square btn-outline-light rounded-circle"

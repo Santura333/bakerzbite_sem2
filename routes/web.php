@@ -134,6 +134,13 @@ Route::middleware(['auth:admin'])->group(function () {
 });
 
 // Route Product
+
+// Route::get('/test', function () {
+//     // return view('test');
+//     return \App\Models\Product::find(1)->productImages;
+// });
+
+
 Route::prefix('shop')->group(function(){
     Route::get('/product/{id}', [ProductController::class, 'show']);
 

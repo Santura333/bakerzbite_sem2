@@ -87,16 +87,18 @@
                 <div class="product-imgs">
                     <div class="img-display">
                         <div class="img-showcase">
-                            <img src="../img/items/{{ $product->productImages[0]->path }}" alt="cake image">
+                            <img src="{{ asset('frontend') }}/img/items/{{ $product->productImages[0]->path }}" alt="cake image">
                         </div>
                     </div>
                     <div class="img-select">
                         <div class="img-item">
+
                             @foreach ($product->productImages as $productImage)
-                                <div class="" data-imgbigurl="../img/items/{{ $productImage->path }}">
-                                    <img src="../img/items/{{ $productImage->path }}" alt="">
+                                <div class="" data-imgbigurl="{{ asset('frontend') }}/img/items/{{ $productImage->path }}">
+                                    <img src="{{ asset('frontend') }}/img/items/{{ $productImage->path }}" alt="">
                                 </div>
                             @endforeach
+
                         </div>
                     </div>
                 </div>
