@@ -54,7 +54,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'brand_id' => 2,
+                'brand_id' => 1,
                 'product_category_id' => 1,
                 'type' => 'cakes',
                 'name' => 'Sponge cakes',
@@ -65,7 +65,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'brand_id' => 3,
+                'brand_id' => 1,
                 'product_category_id' => 1,
                 'type' => 'cakes',
                 'name' => 'Chocolate cakes',
@@ -76,7 +76,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'brand_id' => 4,
+                'brand_id' => 1,
                 'product_category_id' => 1,
                 'type' => 'cakes',
                 'name' => 'Layer cakes',
@@ -87,7 +87,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'brand_id' => 5,
+                'brand_id' => 1,
                 'product_category_id' => 1,
                 'type' => 'cakes',
                 'name' => 'Coffee cakes',
@@ -98,7 +98,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 6,
-                'brand_id' => 6,
+                'brand_id' => 2,
                 'product_category_id' => 2,
                 'type' => 'cookies',
                 'name' => 'Canestrelli',
@@ -109,7 +109,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'brand_id' => 7,
+                'brand_id' => 2,
                 'product_category_id' => 2,
                 'type' => 'cookies',
                 'name' => 'Chocochip cookies',
@@ -120,7 +120,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 8,
-                'brand_id' => 8,
+                'brand_id' => 2,
                 'product_category_id' => 2,
                 'type' => 'Cookies',
                 'name' => 'Biscotti',
@@ -131,7 +131,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 9,
-                'brand_id' => 9,
+                'brand_id' => 2,
                 'product_category_id' => 2,
                 'type' => 'cookies',
                 'name' => 'Anzac',
@@ -142,7 +142,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 10,
-                'brand_id' => 10,
+                'brand_id' => 2,
                 'product_category_id' => 2,
                 'type' => 'cookies',
                 'name' => 'Brownie',
@@ -153,7 +153,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 11,
-                'brand_id' => 11,
+                'brand_id' => 3,
                 'product_category_id' => 3,
                 'type' => 'pastries',
                 'name' => 'Shortcrust pastry',
@@ -164,7 +164,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 12,
-                'brand_id' => 12,
+                'brand_id' => 3,
                 'product_category_id' => 3,
                 'type' => 'pastries',
                 'name' => 'Flaky pastry',
@@ -175,7 +175,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 13,
-                'brand_id' => 13,
+                'brand_id' => 3,
                 'product_category_id' => 3,
                 'type' => 'pastries',
                 'name' => 'Choux pastry',
@@ -186,7 +186,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 14,
-                'brand_id' => 14,
+                'brand_id' => 3,
                 'product_category_id' => 3,
                 'type' => 'pastries',
                 'name' => 'Hot water crust pastry',
@@ -197,7 +197,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 15,
-                'brand_id' => 15,
+                'brand_id' => 3,
                 'product_category_id' => 3,
                 'type' => 'pastries',
                 'name' => 'Strawberry puff pastry',
@@ -208,7 +208,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 16,
-                'brand_id' => 16,
+                'brand_id' => 4,
                 'product_category_id' => 4,
                 'type' => 'pies',
                 'name' => 'Pumpking pie',
@@ -219,7 +219,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 17,
-                'brand_id' => 17,
+                'brand_id' => 4,
                 'product_category_id' => 4,
                 'type' => 'pies',
                 'name' => 'Chocolate pie',
@@ -230,7 +230,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 18,
-                'brand_id' => 18,
+                'brand_id' => 4,
                 'product_category_id' => 4,
                 'type' => 'pies',
                 'name' => 'Apple pie',
@@ -241,7 +241,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 19,
-                'brand_id' => 19,
+                'brand_id' => 4,
                 'product_category_id' => 4,
                 'type' => 'pies',
                 'name' => 'Lemon pie',
@@ -252,7 +252,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 20,
-                'brand_id' => 20,
+                'brand_id' => 4,
                 'product_category_id' => 4,
                 'type' => 'pies',
                 'name' => 'Satagazy pie',
@@ -263,7 +263,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 21,
-                'brand_id' => 21,
+                'brand_id' => 5,
                 'product_category_id' => 5,
                 'type' => 'cupcake',
                 'name' => 'Satagazy pie',
@@ -274,7 +274,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 22,
-                'brand_id' => 22,
+                'brand_id' => 5,
                 'product_category_id' => 5,
                 'type' => 'cupcake',
                 'name' => 'Satagazy pie',
@@ -285,7 +285,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 23,
-                'brand_id' => 23,
+                'brand_id' => 5,
                 'product_category_id' => 5,
                 'type' => 'cupcake',
                 'name' => 'Satagazy pie',
@@ -296,7 +296,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 24,
-                'brand_id' => 24,
+                'brand_id' => 5,
                 'product_category_id' => 5,
                 'type' => 'cupcake',
                 'name' => 'Satagazy pie',
@@ -307,7 +307,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 25,
-                'brand_id' => 25,
+                'brand_id' => 5,
                 'product_category_id' => 5,
                 'type' => 'cupcake',
                 'name' => 'Satagazy pie',
@@ -318,7 +318,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 26,
-                'brand_id' => 26,
+                'brand_id' => 6,
                 'product_category_id' => 6,
                 'type' => 'chiffon',
                 'name' => 'Canestrelli',
@@ -329,7 +329,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 27,
-                'brand_id' => 27,
+                'brand_id' => 6,
                 'product_category_id' => 6,
                 'type' => 'chiffon',
                 'name' => 'Canestrelli',
@@ -340,7 +340,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 28,
-                'brand_id' => 28,
+                'brand_id' => 6,
                 'product_category_id' => 6,
                 'type' => 'chiffon',
                 'name' => 'Canestrelli',
@@ -351,7 +351,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 29,
-                'brand_id' => 29,
+                'brand_id' => 6,
                 'product_category_id' => 6,
                 'type' => 'chiffon',
                 'name' => 'Canestrelli',
@@ -361,8 +361,8 @@ class ProductSeeder extends Seeder
                 'recipe' => "Flour, baking soda, salt, butter, sugar, egg..",
             ],
             [
-                'id' => 39,
-                'brand_id' => 30,
+                'id' => 30,
+                'brand_id' => 6,
                 'product_category_id' => 6,
                 'type' => 'chiffon',
                 'name' => 'Canestrelli',
@@ -693,6 +693,166 @@ class ProductSeeder extends Seeder
             [
                 'product_id' => 20,
                 'path' => 'pies_20_4.png',
+            ],
+            [
+                'product_id' => 21,
+                'path' => 'cupcake_21_1.png',
+            ],
+            [
+                'product_id' => 21,
+                'path' => 'cupcake_21_2.png',
+            ],
+            [
+                'product_id' => 21,
+                'path' => 'cupcake_21_3.png',
+            ],
+            [
+                'product_id' => 21,
+                'path' => 'cupcake_21_4.png',
+            ],
+            [
+                'product_id' => 22,
+                'path' => 'cupcake_22_1.png',
+            ],
+            [
+                'product_id' => 22,
+                'path' => 'cupcake_22_2.png',
+            ],
+            [
+                'product_id' => 22,
+                'path' => 'cupcake_22_3.png',
+            ],
+            [
+                'product_id' => 22,
+                'path' => 'cupcake_22_4.png',
+            ],
+            [
+                'product_id' => 23,
+                'path' => 'cupcake_23_1.png',
+            ],
+            [
+                'product_id' => 23,
+                'path' => 'cupcake_23_2.png',
+            ],
+            [
+                'product_id' => 23,
+                'path' => 'cupcake_23_3.png',
+            ],
+            [
+                'product_id' => 23,
+                'path' => 'cupcake_23_4.png',
+            ],
+            [
+                'product_id' => 24,
+                'path' => 'cupcake_24_1.png',
+            ],
+            [
+                'product_id' => 24,
+                'path' => 'cupcake_24_2.png',
+            ],
+            [
+                'product_id' => 24,
+                'path' => 'cupcake_24_3.png',
+            ],
+            [
+                'product_id' => 24,
+                'path' => 'cupcake_24_4.png',
+            ],
+            [
+                'product_id' => 25,
+                'path' => 'cupcake_25_1.png',
+            ],
+            [
+                'product_id' => 25,
+                'path' => 'cupcake_25_2.png',
+            ],
+            [
+                'product_id' => 25,
+                'path' => 'cupcake_25_3.png',
+            ],
+            [
+                'product_id' => 25,
+                'path' => 'cupcake_25_4.png',
+            ],
+            [
+                'product_id' => 26,
+                'path' => 'chiffon_26_1.png',
+            ],
+            [
+                'product_id' => 26,
+                'path' => 'chiffon_26_2.png',
+            ],
+            [
+                'product_id' => 26,
+                'path' => 'chiffon_26_3.png',
+            ],
+            [
+                'product_id' => 26,
+                'path' => 'chiffon_26_4.png',
+            ],
+            [
+                'product_id' => 27,
+                'path' => 'chiffon_27_1.png',
+            ],
+            [
+                'product_id' => 27,
+                'path' => 'chiffon_27_2.png',
+            ],
+            [
+                'product_id' => 27,
+                'path' => 'chiffon_27_3.png',
+            ],
+            [
+                'product_id' => 27,
+                'path' => 'chiffon_27_4.png',
+            ],
+            [
+                'product_id' => 28,
+                'path' => 'chiffon_28_1.png',
+            ],
+            [
+                'product_id' => 28,
+                'path' => 'chiffon_28_2.png',
+            ],
+            [
+                'product_id' => 28,
+                'path' => 'chiffon_28_3.png',
+            ],
+            [
+                'product_id' => 28,
+                'path' => 'chiffon_28_4.png',
+            ],
+            [
+                'product_id' => 29,
+                'path' => 'chiffon_29_1.png',
+            ],
+            [
+                'product_id' => 29,
+                'path' => 'chiffon_29_2.png',
+            ],
+            [
+                'product_id' => 29,
+                'path' => 'chiffon_29_3.png',
+            ],
+            [
+                'product_id' => 29,
+                'path' => 'chiffon_29_4.png',
+            ],
+            [
+                'product_id' => 30,
+                'path' => 'chiffon_30_1.png',
+            ],
+            [
+                'product_id' => 30,
+                'path' => 'chiffon_30_2.png',
+            ],
+            [
+                'product_id' => 30,
+                'path' => 'chiffon_30_3.png',
+            ],
+            [
+                'product_id' => 30,
+                'path' => 'chiffon_30_1.png',
             ],
         ]);
 

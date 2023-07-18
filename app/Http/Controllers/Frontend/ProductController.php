@@ -54,28 +54,28 @@ class ProductController extends Controller
     {
         switch ($sortBy)
         {
-            case 'id' :
+            case 'idup' :
                 $products = $products->orderBy('id');
                 break;
-            case '-id' :
+            case 'iddown' :
                 $products = $products->orderByDesc('id');
                 break;
-            case 'name' :
+            case 'nameup' :
                 $products = $products->orderBy('name');
                 break;
-            case '-name' :
+            case 'namedown' :
                 $products = $products->orderByDesc('name');
                 break;
-            case 'price' :
+            case 'priceup' :
                 $products = $products->orderBy('price');
                 break;
-            case '-price' :
+            case 'pricedown' :
                 $products = $products->orderByDesc('price');
                 break;
-            case 'rating' :
+            case 'ratingup' :
                 $products = $products->orderBy('rating');
                 break;
-            case '-rating' :
+            case 'ratingdown' :
                 $products = $products->orderByDesc('rating');
                 break;
             default:
@@ -86,7 +86,7 @@ class ProductController extends Controller
 
         $products -> appends(['sort_by' => $sortBy, 'show' => $perPage]);
 
-        return $products;
+        return $products; 
 
     }
 }

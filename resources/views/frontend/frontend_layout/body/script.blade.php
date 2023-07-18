@@ -1,6 +1,11 @@
 <!-- For demo purposes – can be removed on production -->
 
 <!-- For demo purposes – can be removed on production : End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+        class="bi bi-arrow-up"></i></a>
+
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {{-- <script src="{{ asset('frontend') }}/assets/js/bootstrap.min.js"></script> --}}
@@ -51,11 +56,8 @@
 <script src="{{ asset('vendor') }}/owlcarousel/owl.carousel.min.js"></script>
 
 <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
-    integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+    integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
 
 
