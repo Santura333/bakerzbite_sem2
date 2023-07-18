@@ -28,6 +28,7 @@
                                 <th>User Name </th>
                                 <th>User Email</th>
                                 <th>User Phone Number </th>
+                                <th>Address </th>
                                 <th>User Avatar</th>
                                 <th>Action</th>
 
@@ -40,6 +41,7 @@
                                 <th>User Name </th>
                                 <th>User Email</th>
                                 <th>User Phone Number </th>
+                                <th>Address </th>
                                 <th>User Avatar</th>
                                 <th>Action</th>
                             </tr>
@@ -52,6 +54,7 @@
                                 <td class="sorting_1">{{ $item->name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->phone_number}}</td>
+                                <td>{{ $item->address}}</td>
                                 <td>
                                     <img src="{{ !empty($item->profile_photo_path) ? url('storage/profile-photos/'.$item->profile_photo_path) : url('storage/profile-photos/blank_profile_photo.jpg') }}"
                                         alt="" style="width:70px; height:40px;">

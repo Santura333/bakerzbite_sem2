@@ -45,9 +45,9 @@ class CartController extends Controller
         } else {
             $cart[$id] = [
                 // "id" => $product->id,
-                "name" => $product->product_name,
-                "quantity" => $product->product_qty,
-                "price" => $product->purchase_price,
+                "name" => $product->name,
+                "price" => $product->price,
+                "quantity" => 1
             ];
         }
         $notification = [

@@ -20,6 +20,7 @@
         @error('email')
         <span class="alert text-danger">{{ $message }}</span>
         @enderror
+
         <div class="user-box">
             <input type="text" name="phone_number" class="" id="" value="{{ $user->phone_number }}">
             <label class="" for="">Phone Number <span>*</span></label>
@@ -27,6 +28,15 @@
         @error('phone_number')
         <span class="alert text-danger">{{ $message }}</span>
         @enderror
+
+        <div class="user-box">
+            <input type="text" name="address" class="" id="" value="{{ $user->address }}">
+            <label class="" for="">Address <span>*</span></label>
+        </div>
+        @error('address')
+        <span class="alert text-danger">{{ $message }}</span>
+        @enderror
+
         <div class="user-box">
             <p style="color: white;">Profile Picture <span class="text-danger">*</span></p>
             <div class="controls">

@@ -34,6 +34,7 @@ class FrontendUserProfileController extends Controller
             'name' => 'required',
             'email' => 'required',
             'phone_number' => 'required',
+            'address' => 'required',
             'image' => 'image|mimes:jpg,png,jpeg'
         ]);
         //dd($user, $request->all());
@@ -41,6 +42,7 @@ class FrontendUserProfileController extends Controller
         $data = User::findOrFail(Auth::user()->id);
         $data->name = $request->name;
         $data->email = $request->email;
+        $data->address = $request->address;
         $data->phone_number = $request->phone_number;
 
 

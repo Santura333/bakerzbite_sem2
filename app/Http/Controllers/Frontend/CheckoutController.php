@@ -16,6 +16,7 @@ class CheckoutController extends Controller
     {
         if (Auth::check()) {
             $cartItems = session()->get('cart', []);
+            $user = Auth::user();
 
             if ($cartItems && count($cartItems) > 0) {
                 $cartQty = count($cartItems);
@@ -24,7 +25,7 @@ class CheckoutController extends Controller
                     $cartTotal += $item['price'] * $item['quantity'];
                 }
 
-                return view('frontend.checkout_page.checkout_page', compact('cartItems', 'cartQty', 'cartTotal'));
+                return view('frontend.checkout_page.checkout_page', compact('cartItems', 'cartQty', 'cartTotal', 'user'));
             } else {
                 $notification = [
                     'message' => 'Your shopping cart is empty!!',

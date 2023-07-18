@@ -40,6 +40,7 @@
                         @error('email')
                         <span class="alert text-danger">{{ $message }}</span>
                         @enderror
+
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
                             <input type="text" name="phone_number" class="form-control unicase-form-control text-input"
@@ -48,6 +49,16 @@
                         @error('phone_number')
                         <span class="alert text-danger">{{ $message }}</span>
                         @enderror
+
+                        <div class="form-group">
+                            <label class="info-title" for="exampleInputEmail1">Address <span>*</span></label>
+                            <input type="text" name="address" class="form-control unicase-form-control text-input"
+                                id="exampleInputEmail1" value="{{ $userEdit->address }}">
+                        </div>
+                        @error('address')
+                        <span class="alert text-danger">{{ $message }}</span>
+                        @enderror
+
                         <div class="form-group">
                             <h5>Profile Picture <span class="text-danger">*</span></h5>
                             <div class="controls">

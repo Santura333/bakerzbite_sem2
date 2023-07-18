@@ -9,6 +9,7 @@ Bakerz Bite - Cart Page
     <div class="container">
 
         <div class="my-wishlist-page">
+
             <div class="row">
                 <div class="col-md-12 shopping-cart-table">
                     <div class="table-responsive">
@@ -153,7 +154,7 @@ Bakerz Bite - Cart Page
                                 
 
                                 <td class="col-md-1 close-btn">
-                                    <button type="submit" class="" id="${rowId}" onclick="cartRemove(this.id)"><i class="fa fa-times"></i>Remove</button>
+                                    <button type="submit" class=" btn btn-danger" id="${rowId}" onclick="cartRemove(this.id)" style="text-wrap:nowrap;" ><i class="fa fa-times" style="padding-right: 5px;"></i>Remove</button>
                                 </td>
                             </tr>
                             `
