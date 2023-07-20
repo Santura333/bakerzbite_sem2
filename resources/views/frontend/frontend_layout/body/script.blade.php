@@ -54,9 +54,24 @@
 <script src="{{ asset('frontend') }}/assets/js/owl.carousel.min.js"></script>
 
 <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+{{-- anh duy --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+    integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+=======
+=======
+>>>>>>> 98ae8d837244c3ea9bc833d1ba07fe67fe73d136
+>>>>>>> Stashed changes
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
     integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
 
 
 {{-- <script src="{{ asset('frontend') }}/assets/js/jquery.easing-1.3.min.js"></script> --}}
+>>>>>>> 98ae8d837244c3ea9bc833d1ba07fe67fe73d136

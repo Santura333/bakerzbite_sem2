@@ -11,9 +11,9 @@
     <div class="container-fluid">
 
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">All User Table</h1>
+            {{-- <h1 class="h3 mb-0 text-gray-800">{{$orders['user_id']}}</h1> --}}
             {{-- <a href="/register" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> Create New User</a> --}}
+                    class="fas fa-download fa-sm text-white-50"></i> Create New Order</a> --}}
         </div>
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -25,11 +25,11 @@
                             <tr>
                                 <th>#</th>
                                 <th>ID</th>
-                                <th>User Name </th>
-                                <th>User Email</th>
-                                <th>User Phone Number </th>
-                                <th>Address </th>
-                                <th>User Avatar</th>
+                                <th>Type</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Rating</th>
+                                <th>Recipe</th>
                                 <th>Action</th>
 
                             </tr>
@@ -38,39 +38,32 @@
                             <tr>
                                 <th>#</th>
                                 <th>ID</th>
-                                <th>User Name </th>
-                                <th>User Email</th>
-                                <th>User Phone Number </th>
-                                <th>Address </th>
-                                <th>User Avatar</th>
+                                <th>Type</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Rating</th>
+                                <th>Recipe</th>
                                 <th>Action</th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            @foreach ($users as $item)
+                            @foreach ($products as $item)
                             <tr role="row" class="odd">
                                 <td>{{ $loop->index+1 }}</td>
                                 <td>{{ $item->id }}</td>
+                                <td>{{ $item->type }}</td>
                                 <td class="sorting_1">{{ $item->name }}</td>
-                                <td>{{ $item->email }}</td>
-                                <td>{{ $item->phone_number}}</td>
-                                <td>{{ $item->address}}</td>
-                                <td>
-                                    <img src="{{ !empty($item->profile_photo_path) ? url('storage/profile-photos/'.$item->profile_photo_path) : url('storage/profile-photos/blank_profile_photo.jpg') }}"
-                                        alt="" style="width:70px; height:40px;">
-                                </td>
+                                <td>{{ $item->price }}</td>
+                                <td>{{ $item->rating}}</td>
+                                <td>{{ $item->recipe}}</td>
                                 <td>
                                     <div class="input-group">
-
-                                        <a href="{{ route('user.edit', $item) }}" class="btn btn-info"
-                                            title="Edit Data"><i class="fa fa-pencil">Edit User</i></a>
-
-                                        <form action="{{ route('user.destroy', $item) }}" method="post">
+                                        <form action="{{ route('productAdmin.destroy', $item) }}" method="post">
                                             @method('DELETE')
                                             @csrf
                                             <a href="" class="btn btn-danger" title="Delete Data" id="delete" onclick="event.preventDefault();
                                                                 this.closest('form').submit();"><i
-                                                    class="fa fa-trash"></i>Delete User</a>
+                                                    class="fa fa-trash"></i>Delete Product</a>
                                         </form>
                                     </div>
                                 </td>

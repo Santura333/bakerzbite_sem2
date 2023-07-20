@@ -19,7 +19,7 @@ Checkout Page
 
                                 <!-- guest-login -->
                                 <div class="col-md-6 col-sm-6 already-registered-login">
-                                    <h4 class="checkout-subtitle"><b>Shipping Address</b></h4>
+                                    <h4 class="checkout-subtitle"><b>Shipping Information</b></h4>
 
                                     <form class="shipping-form" method="POST" action="{{ route('checkout.store') }}">
                                         @csrf
@@ -53,6 +53,16 @@ Checkout Page
                                             <span class="alert text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
+                                        <div class="form-group">
+                                            <label class="info-title" for="shippingPhone">Shipping
+                                                Address<span>*</span></label>
+                                            <input type="text" class="form-control unicase-form-control text-input"
+                                                id="shippingAddress" placeholder="Enter your address"
+                                                name="shipping_address" value="{{ Auth::user()->address }}">
+                                            @error('shipping_address')
+                                            <span class="alert text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
 
                                 </div>
                                 <!-- guest-login -->
@@ -77,14 +87,12 @@ Checkout Page
                         </div>
                         <div class="___class_+?71___">
                             <ul class="nav nav-checkout-progress list-unstyled">
-                                @foreach(session('cart') as $carts => $item)
-                                {{-- @foreach ($carts as $item) --}}
-
+                                {{-- @foreach(session('cart') as $carts => $item)
                                 <li>
                                     <strong>Qty:</strong>
                                     {{ $item['quantity'] }}
                                 </li>
-                                @endforeach
+                                @endforeach --}}
                                 <hr>
                                 <li>
                                     <strong>Grand Total: </strong> ${{ $cartTotal }}
@@ -105,11 +113,11 @@ Checkout Page
                             <h4 class="unicase-checkout-title">Select Payment Method</h4>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <label for="">Stripe</label>
                                 <input type="radio" name="payment_method" id="" value="stripe">
 
-                            </div>
+                            </div> --}}
                             {{-- <div class="col-md-4">
                                 <label for="">Card</label>
                                 <input type="radio" name="payment_method" id="" value="card">

@@ -16,10 +16,8 @@
         <div class="col-lg-6 px-5 text-end">
             <small>Follow us:</small>
             <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
-                        class="fab fa-twitter"></i></a>
+                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-twitter"></i></a>
                 <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
                         class="fab fa-linkedin-in"></i></a>
                 <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
@@ -40,45 +38,51 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto p-4 p-lg-0">
-            <div class="{{ (request()->segment(1) == 'home') ? 'active' : ''}}"><a href="./index" class="nav-item nav-link active">Home</a></div>
-            <div class="{{ (request()->segment(1) == 'shop') ? 'active' : ''}}"><a href="./shop" class="nav-item nav-link">Products</a></div>
-            <div class="{{ (request()->segment(1) == 'about') ? 'active' : ''}}"><a href="/about" class="nav-item nav-link">About</a></div>
+            <div class="{{ (request()->segment(1) == 'home') ? 'active' : ''}}"><a href="./index"
+                    class="nav-item nav-link active">Home</a></div>
+            <div class="{{ (request()->segment(1) == 'shop') ? 'active' : ''}}"><a href="./shop"
+                    class="nav-item nav-link">Products</a></div>
+            <div class="{{ (request()->segment(1) == 'about') ? 'active' : ''}}"><a href="/about"
+                    class="nav-item nav-link">About</a></div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
-                    <div class="{{ (request()->segment(1) == 'about') ? 'active' : 'map'}}"><a href="./pages/map" class="dropdown-item">Site Map</a></div>
-                    <div class="{{ (request()->segment(1) == 'about') ? 'active' : 'gallery'}}"><a href="./pages/gallery" class="dropdown-item">Gallery</a></div>
+                    <div class="{{ (request()->segment(1) == 'about') ? 'active' : 'map'}}"><a href="./pages/map"
+                            class="dropdown-item">Site Map</a></div>
+                    <div class="{{ (request()->segment(1) == 'about') ? 'active' : 'gallery'}}"><a
+                            href="./pages/gallery" class="dropdown-item">Gallery</a></div>
                 </div>
             </div>
-            <div class="{{ (request()->segment(1) == 'contact') ? 'active' : ''}}"><a href="/contact" class="nav-item nav-link">Contact</a></div>
+            <div class="{{ (request()->segment(1) == 'contact') ? 'active' : ''}}"><a href="/contact"
+                    class="nav-item nav-link">Contact</a></div>
         </div>
         <div class=" d-none d-lg-flex">
             <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
-
-                {{-- <a href="tel:+123456789">
-                    <i class="fa fa-phone text-primary"></i>
-                </a> --}}
-
                 <img class="img-profile rounded-circle"
                     src="{{ isset($user) && !empty($user->profile_photo_path) ? url('storage/profile-photos/' . $user->profile_photo_path) : url('upload/admin_images/blank_profile_photo.jpg') }}"
                     alt="">
-                {{-- <img class="img-profile rounded-circle" src="upload/admin_images/blank_profile_photo.jpg" alt="">
-                --}}
-                {{-- <img class="img-profile rounded-circle"
-                    src="{{ !empty($user->profile_photo_path) ? url('storage/profile-photos/'.$user->profile_photo_path) : url('upload/admin_images/blank_profile_photo.jpg') }}"
-                    alt=""> --}}
             </div>
             <div class="ps-3">
-
-                <small class="text-primary mb-0">Welcome</small>
-                {{-- <a class="nav-link " href="#">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ $user->name }}</span>
-                </a> --}}
-                {{-- <p class="text-light fs-5 mb-0">+012 345 6789</p> --}}
-                <p class="text-light fs-5 mb-0">{{ isset($user) ? $user->name : '' }}</p>
+                {{-- <p class="text-light fs-5 mb-0">{{ isset($user) ? $user->name : '' }}</p> --}}
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ isset($user) ? $user->name
+                        : '' }}</a>
+                    <div class="dropdown-menu m-0">
+                        <div class=""><a href="{{route('user.profile')}}" class="dropdown-item">Profile</a></div>
+                        <div class=""><a href="{{route('myCartView')}}" class="dropdown-item">My Cart</a></div>
+                        <div class=""><a href="{{route('user.logout')}}" class="dropdown-item">Log Out</a></div>
+                    </div>
+                </div>
 
             </div>
         </div>
+
+        <!-- Nav Item - User Information -->
+
+
+
+
+
     </div>
 </nav>
 <!-- Navbar End -->

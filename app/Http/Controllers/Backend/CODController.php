@@ -12,10 +12,10 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Mail\OrderMail;
 
-class StripeController extends Controller
+class CODController extends Controller
 {
     //
-    public function stripeOrder(Request $request)
+    public function CODOrder(Request $request)
     {
         // Session Coupon check
         $cartTotal = 0;
@@ -37,8 +37,8 @@ class StripeController extends Controller
         $order->email = $request->input('shipping_email');
         $order->phone = $request->input('shipping_phone');
 
-        $order->payment_type = 'Stripe';
-        $order->payment_method = 'Stripe';
+        $order->payment_type = 'COD';
+        $order->payment_method = 'COD';
         $order->amount = $total_amount;
         $order->order_number = uniqid();
         $order->order_date = Carbon::now()->format('d F Y');

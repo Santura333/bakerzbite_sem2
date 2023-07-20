@@ -8,7 +8,10 @@ use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\OrderController;
+use App\Http\Controllers\Backend\ProductAdminController;
 use App\Http\Controllers\Backend\StripeController;
+use App\Http\Controllers\Backend\CODController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CartPageController;
@@ -60,6 +63,9 @@ Route::group(['prefix' => 'user'], function () {
 
     //stripe payment route
     Route::post('/stripe/v1/payment', [StripeController::class, 'stripeOrder'])->name('stripe.order');
+
+    //COD payment route
+    Route::post('/cod/v1/payment', [CODController::class, 'CODOrder'])->name('cod.order');
 
 
 });
@@ -119,6 +125,12 @@ Route::middleware(['auth:admin'])->group(function () {
         Route::resource('/user', UserController::class);
         Route::get('/edit/user/{user}', [UserController::class, 'UserProfileEdit'])->name('admin.user.edit');
 
+        // Route::get('/order', [OrderController::class, 'orderAll'])->name('order.index');
+        // Route::delete('/order/{id}', [OrderController::class, 'OrderDestroy'])->name('order.destroy');
+
+        Route::resource('/order', OrderController::class);
+        Route::resource('/productAdmin', ProductAdminController::class);
+
         //Route::put('user/{user}', [UserController::class, 'index']);
         //Route::post('/user', [UserController::class, 'update'])->name('user.index');
         // Route::get('/user', [UserController::class, 'index'])->name('user.index');
@@ -133,15 +145,8 @@ Route::middleware(['auth:admin'])->group(function () {
 
 });
 
-// Route Product
 
-// Route::get('/test', function () {
-//     // return view('test');
-//     return \App\Models\Product::find(1)->productImages;
-// });
-
-
-Route::prefix('shop')->group(function(){
+Route::prefix('shop')->group(function () {
     Route::get('/product/{id}', [ProductController::class, 'show']);
 
     Route::get('/', [ProductController::class, 'index']);

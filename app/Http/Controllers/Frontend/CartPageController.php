@@ -9,14 +9,15 @@ use Carbon\Carbon;
 use Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class CartPageController extends Controller
 {
 
     public function myCartView()
     {
-        var_dump(session()->get('cart'));
-        return view('frontend.frontend_layout.cart_page.mycart_view');
+        $user= Auth::user();
+        return view('frontend.frontend_layout.cart_page.mycart_view', compact('user'));
     }
 
     // public function showmyCartList()
