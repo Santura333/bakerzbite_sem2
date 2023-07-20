@@ -7,7 +7,7 @@
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative banner">
-                <img class="img-fluid banner" src="{{ asset('frontend') }}/img/caurosel-1.png" alt="">
+                <img class="img-fluid banner" src="{{ asset('frontend') }}/img/caurosel-3.png" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -17,7 +17,7 @@
                                     daily.</h1>
                                 <p class="text-light fs-5 mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor sed stet
                                     sit diam rebum ipsum.</p>
-                                <a href="/" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
+                                <a href="" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
                             </div>
                         </div>
                     </div>

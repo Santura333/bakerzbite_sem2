@@ -10,8 +10,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {{-- <script src="{{ asset('frontend') }}/assets/js/bootstrap.min.js"></script> --}}
 
-<script src="{{ asset('frontend') }}/assets/js/owl.carousel.min.js"></script>
-
 
 {{-- thu vien sweet alert, dung o function incrementQuantity tai mycart_view.blade.php --}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -48,12 +46,12 @@
 {{-- dang --}}
 {{-- <script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ asset('vendor') }}/wow/wow.min.js"></script>
-<script src="{{ asset('vendor') }}/jquery-easing/easing.min.js"></script>
-<script src="{{ asset('vendor') }}/waypoints/waypoints.min.js"></script>
-<script src="{{ asset('vendor') }}/counterup/counterup.min.js"></script>
-<script src="../lib/parallaxie/parallaxie.js"></script>
-<script src="{{ asset('vendor') }}/owlcarousel/owl.carousel.min.js"></script>
+<script src="{{ asset('frontend') }}/assets/js/wow.min.js"></script>
+<script src="{{ asset('frontend') }}/assets/js/easing.min.js"></script>
+<script src="{{ asset('frontend') }}/assets/js/waypoints.min.js"></script>
+<script src="{{ asset('frontend') }}/assets/js/counterup.min.js"></script>
+<script src="{{ asset('frontend') }}/assets/js/parallaxie/parallaxie.js"></script>
+<script src="{{ asset('frontend') }}/assets/js/owl.carousel.min.js"></script>
 
 <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"

@@ -3,6 +3,7 @@
 {{-- -------file css main cho cac trong web --}}
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/style.css">
+<link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/details.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/aside.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/form.css">
 
@@ -32,8 +33,8 @@
 {{-- dang --}}
 <link rel="stylesheet" href="{{ asset('frontend/css/contact.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/css/about.css') }}">
-<link rel="stylesheet" href="{{ asset('frontend/css/flipclock.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend') }}/css/flipclock.css">
+<link rel="stylesheet" href="{{ asset('frontend') }}/assets/js/owl.carousel.min.css">
 
-<link href="{{ asset('frontend/lib/animate/animate.min.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('vendor') }}/owlcaurosel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="{{ asset('vendor') }}/animate/animate.min.css')" >
 <link rel="stylesheet" href="{{ asset('vendor') }}/animate/animate.min.css">

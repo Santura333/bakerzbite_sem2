@@ -7,7 +7,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="../index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img src="../img/Bakerz_logo6_edit-removebg-preview.png" alt="" class="logo">
+            <img src="{{ asset('frontend') }}/img/Bakerz_logo6_edit-removebg-preview.png" alt="" class="logo">
 
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -44,7 +44,7 @@
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative banner">
-                <img class="img-fluid banner" src="../img/carousel-1.jpg" alt="">
+                <img class="img-fluid banner" src="{{ asset('frontend') }}/img/carousel-1.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative banner">
-                <img class="img-fluid" src="../img/carousel-2.jpg" alt="">
+                <img class="img-fluid" src="{{ asset('frontend') }}/img/carousel-2.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -91,15 +91,13 @@
                         </div>
                     </div>
                     <div class="img-select">
+                        @foreach ($product->productImages as $productImage)
                         <div class="img-item">
-
-                            @foreach ($product->productImages as $productImage)
                                 <div class="" data-imgbigurl="{{ asset('frontend') }}/img/items/{{ $productImage->path }}">
                                     <img src="{{ asset('frontend') }}/img/items/{{ $productImage->path }}" alt="">
                                 </div>
-                            @endforeach
-
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <!-- card right -->
@@ -187,82 +185,6 @@
         </div>
 
     </div>
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Office Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>06 Le Loi, Hue, VIET NAM</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>NTDgroup@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="./about.html">About Us</a>
-                    <a class="btn btn-link" href="./contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="./products.html">Products</a>
-                    <a class="btn btn-link" href="./map.html">Site Map</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <a href="./gallery.html">
-                        <h4 class="text-light mb-4">Photo Gallery</h4>
-                    </a>
-
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="../img/product-1.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="../img/product-2.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="../img/product-3.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="../img/product-2.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="../img/product-3.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="../img/product-1.jpg" alt="Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">BakeyzBite.Co</a>, All Right Reserved.
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
