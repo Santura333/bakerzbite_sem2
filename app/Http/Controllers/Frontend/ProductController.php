@@ -30,7 +30,7 @@ class ProductController extends Controller
 
         $products = $this->sortAndPagination($products, $sortBy, $perPage);
 
-        return view('frontend.product_page.index', compact('categories','products'));
+        return view('frontend.product_page.index', compact('categories', 'products'));
     }
 
     public function category($categoryName, Request $request)
@@ -46,36 +46,35 @@ class ProductController extends Controller
 
         $products = $this->sortAndPagination($products, $sortBy, $perPage);
 
-        return view('frontend.product_page.index', compact('categories','products'));
+        return view('frontend.product_page.index', compact('categories', 'products'));
 
     }
 
     public function sortAndPagination($products, $sortBy, $perPage)
     {
-        switch ($sortBy)
-        {
-            case 'idup' :
+        switch ($sortBy) {
+            case 'idup':
                 $products = $products->orderBy('id');
                 break;
-            case 'iddown' :
+            case 'iddown':
                 $products = $products->orderByDesc('id');
                 break;
-            case 'nameup' :
+            case 'nameup':
                 $products = $products->orderBy('name');
                 break;
-            case 'namedown' :
+            case 'namedown':
                 $products = $products->orderByDesc('name');
                 break;
-            case 'priceup' :
+            case 'priceup':
                 $products = $products->orderBy('price');
                 break;
-            case 'pricedown' :
+            case 'pricedown':
                 $products = $products->orderByDesc('price');
                 break;
-            case 'ratingup' :
+            case 'ratingup':
                 $products = $products->orderBy('rating');
                 break;
-            case 'ratingdown' :
+            case 'ratingdown':
                 $products = $products->orderByDesc('rating');
                 break;
             default:
@@ -84,9 +83,9 @@ class ProductController extends Controller
 
         $products = $products->paginate($perPage);
 
-        $products -> appends(['sort_by' => $sortBy, 'show' => $perPage]);
+        $products->appends(['sort_by' => $sortBy, 'show' => $perPage]);
 
-        return $products; 
+        return $products;
 
     }
 }
