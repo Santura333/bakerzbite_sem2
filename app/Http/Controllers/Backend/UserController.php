@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\UserStoreRequest;
-//use Image;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
 

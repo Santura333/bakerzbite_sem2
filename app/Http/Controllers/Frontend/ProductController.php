@@ -6,20 +6,24 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
     public function show($id)
     {
         $product = Product::findOrFail($id);
+        $user = Auth::user();
 
-        return view('frontend.product_page.product', compact('product'));
+        return view('frontend.product_page.product', compact('product', 'user'));
     }
 
     public function index(Request $request)
     {
         // Get Categories:
         $categories = ProductCategory::all();
+        // nhat: de cp header avatar
+        $user = Auth::user();
 
         // Get Products:
         $perPage = $request->show ?? 6;
@@ -30,13 +34,14 @@ class ProductController extends Controller
 
         $products = $this->sortAndPagination($products, $sortBy, $perPage);
 
-        return view('frontend.product_page.index', compact('categories', 'products'));
+        return view('frontend.product_page.index', compact('categories', 'products', 'user'));
     }
 
     public function category($categoryName, Request $request)
     {
         // Get Categories:
         $categories = ProductCategory::all();
+        $user = Auth::user();
 
         // Get Products:
         $perPage = $request->show ?? 6;
@@ -46,7 +51,7 @@ class ProductController extends Controller
 
         $products = $this->sortAndPagination($products, $sortBy, $perPage);
 
-        return view('frontend.product_page.index', compact('categories', 'products'));
+        return view('frontend.product_page.index', compact('categories', 'products', 'user'));
 
     }
 

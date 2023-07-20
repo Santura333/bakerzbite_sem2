@@ -88,7 +88,7 @@ $route = Route::current()->getName();
             Addons
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- Nav Item - User Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#userAll" aria-expanded="true"
                 aria-controls="userAll">
@@ -98,6 +98,33 @@ $route = Route::current()->getName();
             <div id="userAll" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="{{ route('user.index') }}"><i class="ti-more"></i>All User</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#orderAll" aria-expanded="true"
+                aria-controls="orderAll">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Order</span>
+            </a>
+            <div id="orderAll" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="{{ route('order.index') }}"><i class="ti-more"></i>All order</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productAll" aria-expanded="true"
+                aria-controls="orderAll">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Product</span>
+            </a>
+            <div id="productAll" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="{{ route('productAdmin.index') }}"><i class="ti-more"></i>All
+                        Product</a>
                 </div>
             </div>
         </li>

@@ -113,11 +113,11 @@ Checkout Page
                             <h4 class="unicase-checkout-title">Select Payment Method</h4>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <label for="">Stripe</label>
                                 <input type="radio" name="payment_method" id="" value="stripe">
 
-                            </div>
+                            </div> --}}
                             {{-- <div class="col-md-4">
                                 <label for="">Card</label>
                                 <input type="radio" name="payment_method" id="" value="card">
