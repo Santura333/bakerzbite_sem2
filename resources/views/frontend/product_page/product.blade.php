@@ -5,7 +5,7 @@
 @section('frontend_content')
 <section class="">
     <!-- Navbar Start -->
-    {{-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="../index.html" class="navbar-brand ms-4 ms-lg-0">
             <img src="{{ asset('frontend') }}/img/Bakerz_logo6_edit-removebg-preview.png" alt="" class="logo">
 
@@ -37,11 +37,11 @@
                 <p class="text-light fs-5 mb-0">+012 345 6789</p>
             </div>
         </div>
-    </nav> --}}
+    </nav>
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
-    {{-- <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative banner">
                 <img class="img-fluid banner" src="{{ asset('frontend') }}/img/carousel-1.jpg" alt="">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- Carousel End -->
 
     <div ng-controller="MyController" class="container-xxl bg-white py-5">
@@ -91,7 +91,6 @@
                                 alt="cake image">
                         </div>
                     </div>
-<<<<<<< HEAD
                     <div class="img-select">
                         @foreach ($product->productImages as $productImage)
                         <div class="img-item">
@@ -101,7 +100,6 @@
                             </div>
                         @endforeach
                     </div>
-=======
                     {{-- <div class="img-select">
                         <div class="img-item">
 
@@ -113,7 +111,6 @@
 
                         </div>
                     </div> --}}
->>>>>>> e582595d3a0455b91714ec07e22194d43e2943d8
                 </div>
                 <!-- card right -->
                 <div class="product-content">
