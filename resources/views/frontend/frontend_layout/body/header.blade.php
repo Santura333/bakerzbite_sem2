@@ -39,7 +39,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto p-4 p-lg-0">
             <div class="{{ (request()->segment(1) == 'home') ? 'active' : ''}}"><a href="./index"
-                    class="nav-item nav-link active">Home</a></div>
+                    class="nav-item nav-link ">Home</a></div>
             <div class="{{ (request()->segment(1) == 'shop') ? 'active' : ''}}"><a href="./shop"
                     class="nav-item nav-link">Products</a></div>
             <div class="{{ (request()->segment(1) == 'about') ? 'active' : ''}}"><a href="/about"
