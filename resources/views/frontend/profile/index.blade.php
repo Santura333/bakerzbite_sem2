@@ -47,7 +47,7 @@
         <div class="col-md-12 widget-user-image">
             <img id="show-image" class="rounded-circle"
                 src="{{ !empty($user->profile_photo_path) ? url('storage/profile-photos/'.$user->profile_photo_path) : url('storage/profile-photos/blank_profile_photo.jpg') }}"
-                alt="User Avatar" style="float: right" width="100px" height="100px">
+                alt="User Avatar" style="float: right; width:auto !important;" height="100px">
         </div>
         <div class="racing-effect">
             <span></span>
@@ -60,39 +60,7 @@
         </div>
     </form>
 
-    {{-- <div class="login-box bg-dark">
-        <form action="{{ route('user.profile') }}" method="post" enctype="multipart/form-data">
-            @csrf
-            <input type="hidden" name="id" value="{{ $user->id }}">
-            <div class="user-box">
-                <input type="text" name="username" value="{{ $user->name }}" required="">
-                <label>User name </label>
-            </div>
-            <div class="user-box">
-                <input type="phone" name="phone" value="{{ $user->phone_number }}" required="">
-                <label>Phone Number </label>
-            </div>
-            <div class="user-box">
-                <input type="email" name="email" value="{{ $user->email }}" required>
-                <label for="">Email </label>
-            </div>
-            <div class="user-box">
-                <p style="color: white;">Profile Picture <span class="text-danger">*</span></p>
-                <input type="file" name="image" id="image" class="form-control">
-            </div>
 
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <button name="submit" type="submit">
-                    Update Profile
-                </button>
-
-            </a>
-        </form>
-    </div> --}}
 
 </div>
 @section('frontend_script')
@@ -107,5 +75,6 @@
         });
     });
 </script>
+
 @endsection
 @endsection

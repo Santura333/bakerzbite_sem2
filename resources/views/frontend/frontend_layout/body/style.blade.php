@@ -31,7 +31,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 {{-- dang --}}
-<link rel="stylesheet" href="{{ asset('frontend/css/contact.css') }}">
+
 <link rel="stylesheet" href="{{ asset('frontend/css/about.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend') }}/css/flipclock.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/js/owl.carousel.min.css">

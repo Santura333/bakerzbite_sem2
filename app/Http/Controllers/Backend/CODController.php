@@ -17,6 +17,7 @@ class CODController extends Controller
     //
     public function CODOrder(Request $request)
     {
+        $user = Auth::user();
         // Session Coupon check
         $cartTotal = 0;
         if (Session::has('cart')) {
@@ -48,15 +49,6 @@ class CODController extends Controller
         $order->save();
         $order_id = $order->id;
 
-        // Start Send Email
-        // $data = [
-        //     'amount' => $total_amount,
-        //     'name' => $order->name,
-        //     'email' => $order->email,
-        // ];
-        // Mail::to($order->email)->send(new OrderMail($data));
-        // End Send Email
-
         // Cart Service Area
         $carts = session()->get('cart');
         foreach ($carts as $key => $cart) {
@@ -79,6 +71,6 @@ class CODController extends Controller
         ];
 
         return redirect()->route('dashboard')->with($notification);
+
     }
 }
-//confilct

@@ -1,61 +1,48 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
+<link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/login.css">
+<div class="header">
+    <div class="header-main">
+        <img src="{{ asset('frontend/img/Bakerz_logo6_edit-removebg-preview.png') }}" alt="">
 
-            {{--
-            <x-authentication-card-logo /> --}}
-            <img src="{{ asset('frontend/img/logo.png') }}" alt="" class="logo" style="height: 100px" ; width="100px;">
-        </x-slot>
+        <h1> Login </h1>
+        <div class="header-bottom">
+            <div class="header-right w3agile">
 
-        <x-validation-errors class="mb-4" />
+                <div class="header-left-bottom agileinfo">
+                    @csrf
 
-        @if (session('status'))
-        <div class="mb-4 font-medium text-sm text-green-600">
-            {{ session('status') }}
+                    <form method="POST" action="{{ route('login') }}">
+                        <input type="text" :value="old('email')" name="name" id="email" name="email"
+                            :value="old('email')" required autofocus autocomplete="username" />
+                        <input id="password" class="block mt-1 w-full" type="password" name="password" required
+                            autocomplete="current-password" />
+
+
+                        <div class="remember">
+                            <span class="checkbox1">
+                                <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Remember
+                                    me</label>
+                            </span>
+                            <div class="forgot">
+                                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    href="{{ route('register') }}" style="padding-right: 10px;">
+                                    {{ __('Register') }}
+                                </a>
+                                <h6><a href="#">Forgot Password?</a></h6>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+
+                        <button type="submit" class="login-button-thien">Login</button>
+                    </form>
+                    <div class="header-left-top">
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        @endif
+    </div>
+</div>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
-                    autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-
-            <div class="flex items-center justify-end mt-4">
-
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    href="{{ route('register') }}" style="padding-right: 10px;">
-                    {{ __('Register') }}
-                </a>
-
-                @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-                @endif
-
-                <x-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+<script src="{{ asset('frontend') }}/assets/js/jquery,log.js"></script>

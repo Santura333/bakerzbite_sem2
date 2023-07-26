@@ -38,7 +38,8 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $adminData = Admin::find(1);
-        $userEdit = $user;
+        //$userEdit = $user;
+        $userEdit = User::find($user->id);
         //tham so cua function la $user nen compact('user') chay duoc
         return view('admin.User.edit', compact('userEdit', 'adminData'));
     }
@@ -76,19 +77,21 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'address' => 'required',
             'phone_number' => 'required',
             'image' => 'image|mimes:jpg,png,jpeg'
         ]);
-        var_dump($request->image);
+
         //dd($user, $user->all());
         // tim user trong bảng users  theo id rồi gán thông tin user đó vào biên $data
         // $data = User::findOrFail(Auth::user()->id);
-        //$data = User::findOrFail(User::find($user->id));
-        $data = $user;
+        $data = User::find($user->id);
+        //$data = $user;
         // lưu các value từ user vào $data 
         $data->name = $request->name;
         $data->email = $request->email;
         $data->phone_number = $request->phone_number;
+        $data->address = $request->address;
 
 
         if ($request->file('image')) {

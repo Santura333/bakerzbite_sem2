@@ -62,8 +62,8 @@
                                 <td>
                                     <div class="input-group">
 
-                                        <a href="{{ route('user.edit', $item) }}" class="btn btn-info"
-                                            title="Edit Data"><i class="fa fa-pencil">Edit User</i></a>
+                                        <a href="{{ route('user.edit', $item) }}" class="btn btn-info" title="Edit Data"
+                                            style="margin-right: 10px;"><i class="fa fa-pencil">Edit User</i></a>
 
                                         <form action="{{ route('user.destroy', $item) }}" method="post">
                                             @method('DELETE')

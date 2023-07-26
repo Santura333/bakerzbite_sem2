@@ -4,41 +4,6 @@
 {{-- section la 1 khoi de luu tru du lieu => khong hien thi => dung @yield() de hien thi section do --}}
 @section('frontend_content')
 <section class="">
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="../index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img src="{{ asset('frontend') }}/img/Bakerz_logo6_edit-removebg-preview.png" alt="" class="logo">
-
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class=" mx-auto p-4 px-lg-5  w-100  ">
-
-                <div class="wrapper mx-auto">
-                    <div class="display">
-                        <p class="p-0 m-0 text-white">END IN</p>
-                        <div id="time" class="mt-0 pt-0"></div>
-                    </div>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-        <div class=" d-none d-lg-flex">
-            <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
-                <a href="tel:+123456789">
-                    <i class="fa fa-phone text-primary"></i>
-                </a>
-            </div>
-            <div class="ps-3">
-                <small class="text-primary mb-0">Call Us</small>
-                <p class="text-light fs-5 mb-0">+012 345 6789</p>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -94,10 +59,10 @@
                     <div class="img-select">
                         @foreach ($product->productImages as $productImage)
                         <div class="img-item">
-                                <div class="" data-imgbigurl="{{ asset('frontend') }}/img/items/{{ $productImage->path }}">
-                                    <img src="{{ asset('frontend') }}/img/items/{{ $productImage->path }}" alt="">
-                                </div>
+                            <div class="" data-imgbigurl="{{ asset('frontend') }}/img/items/{{ $productImage->path }}">
+                                <img src="{{ asset('frontend') }}/img/items/{{ $productImage->path }}" alt="">
                             </div>
+                        </div>
                         @endforeach
                     </div>
                     {{-- <div class="img-select">
@@ -141,7 +106,7 @@
                         <input type="hidden" name="" id="product_id" value="{{ $product->id }}" min="1">
                         <a href="{{ route('frontend.product.addToCart', $product->id)}}">
                             <button type="button" class="btn">
-                                <i class="fas fa-phone"> </i> <span> Call Us Now </span>
+                                <i class="fas fa-cart-plus"></i> <span> Add to Cart </span>
                             </button>
                         </a>
                     </div>

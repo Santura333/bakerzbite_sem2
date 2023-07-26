@@ -5,25 +5,6 @@
 {{-- session 'dashboard_content' duoc goi o admin.admin_master --}}
 @section('dashboard_content')
 <section class="content">
-    {{-- <div class="row">
-        <div class="col-12 col-lg-5 col-xl-6">
-            <div class=" ">
-                <!-- Add the bg color to the header using any of the bg-* classes -->
-                <div class="">
-                    <a href="{{ route('admin.profile.edit') }}" class="btn btn-info">Edit
-                        Profile</a>
-                    <h3 class="widget-user-username">Admin Name: {{ $adminData->name }}</h3>
-                    <h6 class="widget-user-desc">Admin Email: {{ $adminData->email }}</h6>
-                </div>
-                <div class="widget-user-image">
-                    <img class="rounded-circle"
-                        src="{{ !empty($adminData->profile_photo_path) ? url('upload/admin_images/'.$adminData->profile_photo_path) : url('upload/admin_images/blank_profile_photo.jpg') }}"
-                        alt="User Avatar">
-                </div>
-
-            </div>
-        </div>
-    </div> --}}
 
     <div class="page-content page-container" id="page-content">
 
@@ -73,21 +54,6 @@
                                             <a href="{{ route('admin.profile.edit') }}" class="btn btn-info">Edit
                                                 Profile</a>
                                         </div>
-                                        {{-- <ul class="social-link list-unstyled m-t-40 m-b-10">
-                                            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
-                                                    data-original-title="facebook" data-abc="true"><i
-                                                        class="mdi mdi-facebook feather icon-facebook facebook"
-                                                        aria-hidden="true"></i></a></li>
-                                            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
-                                                    data-original-title="twitter" data-abc="true"><i
-                                                        class="mdi mdi-twitter feather icon-twitter twitter"
-                                                        aria-hidden="true"></i></a></li>
-                                            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
-                                                    data-original-title="instagram" data-abc="true"><i
-                                                        class="mdi mdi-instagram feather icon-instagram instagram"
-                                                        aria-hidden="true"></i></a></li>
-
-                                        </ul> --}}
                                 </div>
                             </div>
                         </div>

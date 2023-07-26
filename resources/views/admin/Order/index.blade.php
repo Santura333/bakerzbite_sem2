@@ -51,7 +51,7 @@
                                 <td>{{ $loop->index+1 }}</td>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->user_id }}</td>
-                                <td class="sorting_1">{{ $item->amount }}</td>
+                                <td class="sorting_1">{{ $item->amount }}$</td>
                                 <td>{{ $item->payment_type }}</td>
                                 <td>{{ $item->order_number}}</td>
                                 <td>{{ $item->order_date}}</td>
@@ -61,8 +61,8 @@
                                             @method('DELETE')
                                             @csrf
                                             <a href="" class="btn btn-danger" title="Delete Data" id="delete" onclick="event.preventDefault();
-                                                                this.closest('form').submit();"><i
-                                                    class="fa fa-trash"></i>Delete User</a>
+                                                                this.closest('form').submit();"><i class="fa fa-trash"
+                                                    style="padding-right: 10px"></i>Delete Order</a>
                                         </form>
                                     </div>
                                 </td>

@@ -9,6 +9,10 @@ COD Page
 @endsection
 
 @section('frontend_content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <div class="checkout-box body-content container">
     <div class="row">
         <div class="col-md-6">
@@ -17,7 +21,7 @@ COD Page
                 <div class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="unicase-checkout-title">Your Shopping Amount</h4>
+                            <h4 class="unicase-checkout-title">Thank You Very Much</h4>
                         </div>
                         <div class="">
                             <ul class="nav nav-checkout-progress list-unstyled">
@@ -48,7 +52,7 @@ COD Page
                             </label>
                         </div>
                         <br>
-                        <button class="btn btn-primary">Confirm Order</button>
+                        <button class="btn btn-primary">Return</button>
                     </form>
                 </div>
             </div>
@@ -57,6 +61,10 @@ COD Page
     <hr>
 </div>
 </div>
+
+
+
+
 @endsection
 @section('frontend_script')
 

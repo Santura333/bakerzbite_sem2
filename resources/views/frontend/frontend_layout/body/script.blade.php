@@ -3,8 +3,7 @@
 <!-- For demo purposes – can be removed on production : End -->
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-        class="bi bi-arrow-up"></i></a>
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -59,8 +58,32 @@
     integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
-    integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
 
 
 {{-- <script src="{{ asset('frontend') }}/assets/js/jquery.easing-1.3.min.js"></script> --}}
+
+{{-- custom toaster script --}}
+<script type="text/javascript">
+    @if (Session::has('message'))
+      let type = "{{ Session::get('alert-type', 'info') }}";
+      switch (type) {
+          case 'info':
+              toastr.info("{{ Session::get('message') }}")
+              break;
+          case 'success':
+              toastr.success("{{ Session::get('message') }}")
+              break;
+          case 'warning':
+              toastr.warning("{{ Session::get('message') }}")
+              break;
+          case 'error':
+              toastr.error("{{ Session::get('message') }}")
+              break;
+          default:
+              break;
+      }
+  @endif
+</script>

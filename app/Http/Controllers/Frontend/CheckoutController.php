@@ -14,6 +14,7 @@ class CheckoutController extends Controller
 
     public function checkoutPage()
     {
+
         if (Auth::check()) {
             $cartItems = session()->get('cart', []);
             $user = Auth::user();
@@ -44,6 +45,7 @@ class CheckoutController extends Controller
 
     public function checkoutStore(CheckoutStoreRequest $request)
     {
+        $user = Auth::user();
 
         $data = [];
         $data['shipping_name'] = $request->shipping_name;
@@ -68,7 +70,7 @@ class CheckoutController extends Controller
         } elseif ($request->payment_method == 'card') {
             return "card";
         } else {
-            return view('frontend.payment.cod', compact('cartTotal', 'data'));
+            return view('frontend.payment.cod', compact('cartTotal', 'data', 'user'));
         }
 
     }

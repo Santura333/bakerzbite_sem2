@@ -1,18 +1,14 @@
 @extends('admin.admin_master')
 
 @section('dashboard_content')
-{{-- @include('admin.dashboard_layout.breadcrumb', [
-'name' => 'Category',
-'url' => "categories.index",
-'section_name' => 'Edit Category'
-]) --}}
+
 <section class="content">
     <div class="row">
         {{-- Add Category Page --}}
         <div class="col-md-8 col-lg-8 offset-2">
             <div class="box">
                 <div class="box-header with-border d-flex justify-content-between align-items-center">
-                    <h3 class="box-title">Update User11</h3>
+                    <h3 class="box-title">Update User</h3>
                     <a href="{{ route('user.index') }}" class="btn btn-primary">Back To List User</a>
                 </div>
                 <!-- /.box-header -->
@@ -25,7 +21,7 @@
                         @csrf
                         {{-- <input type="hidden" name="id" value="{{ $user->id }}"> --}}
                         <div class="form-group">
-                            <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
+                            <label class="info-title" for="exampleInputEmail1">Full Name <span>*</span></label>
                             <input type="name" name="name" class="form-control unicase-form-control text-input"
                                 id="exampleInputEmail1" value={{ $userEdit->name }}>
                         </div>

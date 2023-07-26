@@ -54,7 +54,7 @@ Bakerz Bite - Cart Page
                 </div>
 
                 <div>
-                    <div>Total: <span id="total_bill"></span></div>
+                    <div>Total: $<span id="total_bill"></span></div>
                 </div>
                 <div class="col-md-4 col-sm-12 ">
                     <table class="table">
@@ -84,45 +84,6 @@ Bakerz Bite - Cart Page
 
 {{-- goi o frontend.frontend_layout.body.script --}}
 @section('frontend_script')
-{{-- <script>
-    $(".delete-product").click(function (e) {
-        e.preventDefault();
-  
-        var ele = $(this);
-  
-        if(confirm("Do you really want to delete?")) {
-            $.ajax({
-                url: '{{ route('delete.cart.product') }}',
-                method: "DELETE",
-                data: {
-                    _token: '{{ csrf_token() }}', 
-                    id: ele.parents("tr").attr("rowId")
-                },
-                success: function (response) {
-                    window.location.reload();
-                }
-            });
-        }
-    });
-
-    $(".update-product").change(function (e) {
-        e.preventDefault();
-        var ele = $(this);
-        $.ajax({
-            url: '{{ route('update.cart.product') }}',
-            method: "patch",
-            data: {
-                _token: '{{ csrf_token() }}', 
-                id: ele.parents("tr").attr("rowId"), 
-            },
-            success: function (response) {
-               window.location.reload();
-            }
-        });
-    });
-
-</script> --}}
-
 
 <script>
     function cart() {

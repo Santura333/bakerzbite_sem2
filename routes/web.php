@@ -30,8 +30,14 @@ use App\Models\Admin;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    $user = Auth::user();
+    return view('home', compact('user'));
 });
+
+Route::get('/contact', function () {
+    return view('frontend.page.contact');
+})->name('user.contact');
 
 
 // user
@@ -54,12 +60,6 @@ Route::middleware(['auth:web'])->group(function () {
 
 //Wishlist routes
 Route::group(['prefix' => 'user'], function () {
-    // // add to wishlist route
-    // Route::post('/add/product/to-wishlist/{product_id}', [WishlistController::class, 'addToWishlist'])->name('addtoWishlist');
-    // // list wishlist route
-    // Route::get('/list/wishlists', [WishlistController::class, 'listWishList'])->name('listWishlist');
-    // // remove from wishlist
-    // Route::get('/remove/from-wishlist/{wish_id}', [WishlistController::class, 'removefromWishList'])->name('removefromWishList');
 
     //stripe payment route
     Route::post('/stripe/v1/payment', [StripeController::class, 'stripeOrder'])->name('stripe.order');
@@ -73,10 +73,6 @@ Route::group(['prefix' => 'user'], function () {
 // Add to cart Product route
 Route::get('/product/{id}', [FrontendPageController::class, 'productDeatil'])->name('frontend-product-details');
 Route::get('/product/addToCart/{id}', [CartController::class, 'addToCart'])->name('frontend.product.addToCart');
-// Route::delete('/product/delete-cart-product', [CartController::class, 'deleteProduct'])->name('delete.cart.product');
-// Route::patch('/product/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.cart.product');
-
-
 
 // Cart page routes
 Route::get('/my-cart', [CartPageController::class, 'myCartView'])->name('myCartView');
@@ -114,10 +110,6 @@ Route::middleware(['auth:admin'])->group(function () {
         return view('admin.index', compact('adminData'));
     })->name('admin.dashboard');
 
-    // Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
-    //     $adminData = Admin::find(1);
-    //     return view('admin.index', compact('adminData'));
-    // })->name('admin.dashboard');
 
     // Admin Dashboard all functionality/features routes
     Route::prefix('/admin')->group(function () {
@@ -125,21 +117,9 @@ Route::middleware(['auth:admin'])->group(function () {
         Route::resource('/user', UserController::class);
         Route::get('/edit/user/{user}', [UserController::class, 'UserProfileEdit'])->name('admin.user.edit');
 
-        // Route::get('/order', [OrderController::class, 'orderAll'])->name('order.index');
-        // Route::delete('/order/{id}', [OrderController::class, 'OrderDestroy'])->name('order.destroy');
-
         Route::resource('/order', OrderController::class);
         Route::resource('/productAdmin', ProductAdminController::class);
 
-        //Route::put('user/{user}', [UserController::class, 'index']);
-        //Route::post('/user', [UserController::class, 'update'])->name('user.index');
-        // Route::get('/user', [UserController::class, 'index'])->name('user.index');
-        // Route::get('/edit/user', [UserController::class, 'userEdit'])->name('user.UserEdit');
-        // Route::post('/edit/user', [UserController::class, 'userUpdate'])->name('user.UserUpdate');
-        //Route::get('/destroy', [UserController::class, 'destroy'])->name('user.destroy');
-        // Route::get('/user', [UserController::class, 'edit'])->name('user.update');
-        //Route::post('/{id}/edit', [UserController::class, 'update1'])->name('user.update1');
-        // admin/user/7
 
     });
 

@@ -1,94 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    {{-- <link rel="icon" href="{{ asset('backend') }}/images/favicon.ico"> --}}
 
-    <title>BakerzBite Admin - Log in </title>
-  
-	  
-	<!-- Style-->  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>BakerzBite Admin - Log in </title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="{{ asset('frontend/img/logo.png') }}">
+
+	<!-- Style-->
 	<link rel="stylesheet" href="{{ asset('backend') }}/css/style.css">
+	@include('admin.dashboard_layout.style')
 
 </head>
-<body class="hold-transition theme-primary bg-gradient-primary">
-	
-	<div class="container h-p100">
-		<div class="row align-items-center justify-content-md-center h-p100">	
-			
-			<div class="col-12">
-				<div class="row justify-content-center no-gutters">
-					<div class="col-lg-4 col-md-5 col-12">
-						<div class="content-top-agile p-10">
-							<h2 class="text-white">Get started with Us</h2>
-							<p class="text-white-50">Sign in to start your session</p>							
-						</div>
-						<div class="p-30 rounded30 box-shadowed b-2 b-dashed">
-                            <form method="POST" action="{{ isset($guard) ? url($guard.'/login') : route('login') }}">
-                                @csrf
-								<div class="form-group">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
-										</div>
-										<input type="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Email" name="email" required autofocus>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text  bg-transparent text-white"><i class="ti-lock"></i></span>
-										</div>
-										<input type="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Password" required autofocus>
-									</div>
-								</div>
-								  <div class="row">
-									<div class="col-6">
-									  <div class="checkbox text-white">
-										<input type="checkbox" id="basic_checkbox_1" name='remember'>
-										<label for="basic_checkbox_1">{{ __('Remember me') }}</label>
-									  </div>
-									</div>
-									<!-- /.col -->
-									<div class="col-6">
-									 <div class="fog-pwd text-right">
-                                        @if (Route::has('password.request'))
-										<a href="{{ route('password.request') }}" class="text-white hover-info"><i class="ion ion-locked"></i> {{ __('Forgot your password?') }}</a><br>
-                                        @endif
-									  </div>
-									</div>
-									<!-- /.col -->
-									<div class="col-12 text-center">
-									  <button type="submit" class="btn btn-info btn-rounded mt-10">{{ __("SIGN IN") }}</button>
-									</div>
-									<!-- /.col -->
-								  </div>
-							</form>														
 
-							{{-- <div class="text-center text-white">
-							  <p class="mt-20">- Sign With -</p>
-							  <p class="gap-items-2 mb-20">
-								  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-facebook"></i></a>
-								  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-twitter"></i></a>
-								  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-google-plus"></i></a>
-								  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-instagram"></i></a>
-								</p>	
-							</div>					 --}}
-							{{-- <div class="text-center">
-								<p class="mt-15 mb-0 text-white">Don't have an account? <a href="auth_register.html" class="text-info ml-5">Sign Up</a></p>
-							</div> --}}
+<body class="hold-transition theme-primary bg-gradient-primary">
+
+
+
+	<div class="container">
+		<!-- Outer Row -->
+		<div class="row justify-content-center">
+
+			<div class="col-xl-10 col-lg-12 col-md-9">
+
+				<div class="card o-hidden border-0 shadow-lg my-5">
+					<div class="card-body p-0">
+						<!-- Nested Row within Card Body -->
+						<div class="row">
+							<div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+							<div class="col-lg-6">
+								<div class="p-5">
+									<div class="text-center">
+										<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+									</div>
+									<form class="user" method="POST"
+										action="{{ isset($guard) ? url($guard.'/login') : route('login') }}">
+										@csrf
+										<div class="form-group">
+											<input type="email" class="form-control form-control-user"
+												id="exampleInputEmail" aria-describedby="emailHelp"
+												placeholder="Enter Email Address..." name="email" required autofocus>
+										</div>
+										<div class="form-group">
+											<input type="password" name="password"
+												class="form-control form-control-user" id="exampleInputPassword"
+												placeholder="Password" required autofocus>
+										</div>
+										<div class="form-group">
+											<div class="custom-control custom-checkbox small">
+												<input type="checkbox" class="custom-control-input" id="customCheck">
+												<label class="custom-control-label" for="customCheck">Remember
+													Me</label>
+											</div>
+										</div>
+										<button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+									</form>
+									<hr>
+									<div class="text-center">
+										<a class="small" href="forgot-password.html">Forgot Password?</a>
+									</div>
+									<div class="text-center">
+										<a class="small" href="register.html">Create an Account!</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
+
 		</div>
+
 	</div>
 
 
 
 </body>
+
 </html>
